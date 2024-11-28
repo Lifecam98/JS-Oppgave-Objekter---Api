@@ -59,18 +59,17 @@ console.log(myArray[2].job)
 //5. Person three is throwing a giant party! create a function called fotballPubben(). The function should check if the person is over 18, print "party time" if they are and "too young" if they are not. It should also print the name of the person.
 // use a loop to call the function for every person in the array.
 //------------------------------------------------------------------------------------------------------------------------------------------------
-for (let i = 0; i < myArray.length; i++) {
-    myArray[i].fotballPubben = function () {
-        if (this.age > 18) {
-            return "party time"
-        } else {
-            return "too young"
-        }
+
+function fotballPubben(person) {
+    if (person.age > 18) {
+        return "party time"
+    } else {
+        return "too young"
     }
-    console.log(myArray[i].fotballPubben())
 }
-console.log(myArray[3].fotballPubben())
-console.log(myArray[4].fotballPubben())
+for (let i = 0; i < myArray.length; i++) {
+    console.log(myArray[i].fullName() + " is " + fotballPubben(myArray[i]))
+}
 
 //6. It's time for school! Create a function called university. It should take in an person object as well as type of degree (bachelors or masters) as arguments.
 // The function should update age and add two properties called "degree" and "student loan". The value of age, degree and student loan should change depending on what degree
