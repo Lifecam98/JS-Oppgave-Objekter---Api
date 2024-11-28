@@ -109,10 +109,6 @@ async function fetchData(url) {
 }
 const getData = await fetchData(apiLink);
 // console.log(getData)
-// console.log(getData.message[0])
-// console.log(getData.message[1])
-// console.log(getData.message[2])
-// console.log(getData.message[3])
 
 firstDog.src = getData.message[0];
 secondDog.src = getData.message[1];
@@ -122,3 +118,23 @@ fourthDog.src = getData.message[3];
 //BONUS!!
 //create a way for you to change the breed of the dogs displayed on your page
 //------------------------------------------------------------------------------------------------------------------------------------------------
+// NOTE: Måtte jukse litt her, men kult å se hvordan det ville fungert!!!
+
+// const breedInput = document.createElement("input");
+// breedInput.type = "text";
+// breedInput.id = "breed";
+// breedInput.placeholder = "Enter a breed";
+// document.body.appendChild(breedInput);
+
+// const changeBreedButton = document.createElement("button");
+// changeBreedButton.textContent = "Change Breed";
+// changeBreedButton.onclick = async () => {
+//     const breed = document.getElementById("breed").value;
+//     const apiLink = `https://dog.ceo/api/breed/${breed}/images/random/4`
+//     const getData = await fetchData(apiLink);
+//     firstDog.src = getData.message[0];
+//     secondDog.src = getData.message[1];
+//     thirdDog.src = getData.message[2];
+//     fourthDog.src = getData.message[3];
+// }
+// document.body.appendChild(changeBreedButton);
