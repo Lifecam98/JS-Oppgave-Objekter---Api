@@ -52,8 +52,9 @@ console.log (myArray[1].fullName())
 
 //4. Its the third person's birthday! And their job status changed. Update their age and job status using dot notation.
 //------------------------------------------------------------------------------------------------------------------------------------------------
+myArray[2].age ++
 console.log(myArray[2].job)
-myArray[2].job = false
+myArray[2].job = !myArray[2].job
 console.log(myArray[2].job)
 
 //5. Person three is throwing a giant party! create a function called fotballPubben(). The function should check if the person is over 18, print "party time" if they are and "too young" if they are not. It should also print the name of the person.
@@ -106,6 +107,14 @@ async function fetchData(url) {
     const data = await response.json();
     return data;
 }
+// Alternaltiv metode
+// async function fetchData(url) {
+//     return fetch(url)
+//         .then((response) => response.json())
+//         .then((data) => data)
+//         .catch((error) => console.log("error", error));
+// }
+
 const getData = await fetchData(apiLink);
 // console.log(getData)
 
